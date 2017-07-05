@@ -21,7 +21,6 @@ public class PositionReportsController
 	@RequestMapping(method=RequestMethod.GET,value="/vehicles/{vehicleName}")
 	public ResponseEntity<Position> getLatestReportForVehicle(@PathVariable String vehicleName)
 	{
-		System.out.println("Received Request");
 		try 
 		{
 			Position position = data.getLatestPositionFor(vehicleName);

@@ -18,6 +18,7 @@ public class Position implements Comparable<Position>
 	
     @JsonFormat(shape=JsonFormat.Shape.STRING, pattern="yyyy-MM-dd'T'HH:mm:ss.SSSZ", timezone="UTC")
 	private Date timestamp;
+	private BigDecimal speed;
 	
 	public Position() {}
 	
@@ -78,5 +79,14 @@ public class Position implements Comparable<Position>
 	public int compareTo(Position o) 
 	{
 		return o.timestamp.compareTo(this.timestamp);
+	}
+
+	public void setSpeed(BigDecimal speed) {
+		this.speed = speed;
+	}
+	
+	public BigDecimal getSpeed()
+	{
+		return this.speed;
 	}
 }
