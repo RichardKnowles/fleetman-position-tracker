@@ -56,6 +56,7 @@ public class Data
 		}
 		Position newPosition = new Position(data.get("lat"), data.get("long"), data.get("time"));
 		positions.add(newPosition);
+		System.out.println("New position data: " + positionQueues);
 	}
 	
 	public Position getLatestPositionFor(String vehicleName) throws VehicleNotFoundException
